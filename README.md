@@ -12,3 +12,7 @@ cd ~/dotfiles;
 'ls' -md */ | sed -E 's/\/,?//g' | xargs -n1 stow --adopt ;
 git restore .;
 ```
+```
+'ls' -md */ | sed -E 's/\/,?//g' | xargs -n1 stow --adopt
+```
+
