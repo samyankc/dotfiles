@@ -10,7 +10,7 @@ export COLORTERM=truecolor
 export PATH="$HOME/bin:$HOME/.local/bin:$HOME/pip-pkg/bin:$PATH"
 export SUDO_EDITOR="$(which hx)"
 alias myip="curl ifconfig.me && echo"
-alias ls="ls --color -l"
+alias ls="ls --color=auto -lhA --group-directories-first"
 alias cls="clear && tput cup 1024 0"
 cls
 
