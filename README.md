@@ -9,6 +9,6 @@ git config core.sshCommand "ssh -i ~/.ssh/GITHUB_MY_SSH_KEY";
 ## Apply config
 ```
 cd ~/dotfiles;
-'ls' -d */ | xargs stow --abdopt ;
+'ls' -md */ | sed -E 's/\/,?//g' | xargs -n1 stow --abdopt ;
 git restore;
 ```
