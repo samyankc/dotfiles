@@ -9,7 +9,6 @@ git config core.sshCommand "ssh -i ~/.ssh/GITHUB_MY_SSH_KEY";
 ## Apply config
 ```
 cd ~/dotfiles;
-ls 
-stow --abdopt <package_name>;
+'ls' -d */ | xargs stow --abdopt ;
 git restore;
 ```
