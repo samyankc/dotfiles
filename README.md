@@ -10,5 +10,5 @@ git config core.sshCommand "ssh -i ~/.ssh/GITHUB_MY_SSH_KEY";
 ```
 cd ~/dotfiles;
 'ls' -md */ | sed -E 's/\/,?//g' | xargs -n1 stow --abdopt ;
-git restore;
+git restore .;
 ```
