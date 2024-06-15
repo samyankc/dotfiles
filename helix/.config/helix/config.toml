@@ -1,0 +1,21 @@
+theme = "dark_plus"
+
+[editor]
+line-number = "relative"
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[editor.file-picker]
+hidden = false
+
+# [keys.normal]
+# ";"  = "command_mode"
+
+[editor.statusline]
+mode.normal = " -- NORMAL -- "
+mode.insert = " -- INSERT -- "
+mode.select = " -- SELECT -- "
