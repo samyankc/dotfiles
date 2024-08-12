@@ -1,9 +1,10 @@
 # SymbolUser=''
-# SymbolHost='🌏🌎🌍🌐'
-# SymbolPath='📂'
-# SymbolPrompt='❱'
-PROMPT="%B%F{green}[]%n %F{cyan}[🌐]%M %F{yellow}[]%~%f%b
- %F{#919191}❱%f "
+# SymbolUser=' '
+# SymbolHost='🌏🌎🌍🌐   󱘖  󰒍 󰡰   '
+# SymbolPath='📂  󰝰 '
+# SymbolPrompt='❱  󱞩 󱞪  '
+PROMPT="%B%F{green} %n  %F{cyan} %M  %F{yellow} %~%f%b
+%F{#919191}󱞪%f "
 
 # export CPPFLAGS="-std=c++23"
 export COLORTERM=truecolor
