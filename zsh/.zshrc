@@ -1,4 +1,3 @@
-# SymbolUser=''
 # SymbolUser=' '
 # SymbolHost='🌏🌎🌍🌐   󱘖  󰒍 󰡰   '
 # SymbolPath='📂  󰝰 '
@@ -8,7 +7,7 @@ PROMPT="%B%F{green} %n  %F{cyan} %M  %F{yellow} %~%f%b
 
 # export CPPFLAGS="-std=c++23"
 export COLORTERM=truecolor
-export PATH="$HOME/bin:$HOME/.local/bin:$HOME/pip-pkg/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export SUDO_EDITOR="$(which hx)"
 alias myip="curl ifconfig.me && echo"
 alias ls="ls --color=auto -lhA --group-directories-first"
