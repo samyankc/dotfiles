@@ -1,0 +1,13 @@
+[language-server.clangd]
+command = "clangd"
+args = ["--enable-config", "--header-insertion=never", "--malloc-trim", "--query-driver=/home/linuxbrew/.linuxbrew/bin/g++-14"]
+
+[[language]]
+name = "cpp"
+scope = "source.cpp"
+injection-regex = "cpp"
+file-types = ["cc", "hh", "c++", "cpp", "hpp", "h", "ipp", "tpp", "cxx", "hxx", "ixx", "txx", "ino", "C", "H", "cu", "cuh", "cppm", "h++", "ii", "inl", { glob = ".hpp.in" }, { glob = ".h.in" }]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = [ "clangd" ]
+indent = { tab-width = 4, unit = " " }
