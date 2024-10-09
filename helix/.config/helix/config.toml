@@ -16,6 +16,6 @@ hidden = false
 # ";"  = "command_mode"
 
 [editor.statusline]
-mode.normal = " -- NORMAL -- "
-mode.insert = " -- INSERT -- "
-mode.select = " -- SELECT -- "
+mode.normal = "  ---  N O R M A L  ---  "
+mode.insert = "  ---  I N S E R T  ---  "
+mode.select = "  ---  S E L E C T  ---  "
