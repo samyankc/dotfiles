@@ -21,23 +21,3 @@ cls
 ssh_host_list(){
   cat ~/.ssh/config | grep "Host "
 }
-
-configure_nginx(){
-  conf_path_1="/etc/nginx/nginx.conf"
-  conf_path_2="/etc/nginx/sites-available/default"
-  echo "1) configure ${conf_path_1}"
-  echo "2) configure ${conf_path_2}"
-  echo "3) reload config"
-  read option
-  case ${option} in
-    1)
-      sudoedit ${conf_path_1}
-      ;;
-    2)
-      sudoedit ${conf_path_2}
-      ;;
-    3)
-      sudo systemctl restart nginx.service
-      ;;
-  esac
-}
