@@ -14,6 +14,7 @@ export PATH="$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$HOMEBREW_PREFIX/opt/bin
 export SUDO_EDITOR="$(which hx)"
 export EDITOR="$(which hx)"
 export FZF_DEFAULT_OPTS="-m --inline-info --preview='chafa {} 2>/dev/null || bat -f {}'"
+export FZF_DEFAULT_COMMAND='fd -HILtf'
 
 alias myip="curl ifconfig.me && echo"
 alias ls="ls --color=auto -lhA --group-directories-first"
