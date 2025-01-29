@@ -1,36 +1,36 @@
 [manager]
 prepend_keymap = [
-	{ on = "<Backspace>",   run = "leave",          		desc = "Go back to the parent directory" },
-    { on = "<Enter>",       run = "enter",          		desc = "Enter the child directory" },
-    { on = "/",             run = "filter --smart", 		desc = "Filter files" },
-    { on = "<C-Home>",      run = "arrow -9999999", 		desc = "Move cursor to the top" },
-	{ on = "<C-End>",       run = "arrow 9999999",			desc = "Move cursor to the bottom" },
-	{ on = "<Delete>",      run = "remove",         		desc = "Trash selected files" },
-	{ on = "<S-Delete>",    run = "remove --permanently",	desc = "Permanently delete selected files" },
+    { on = "<Backspace>",   run = "leave",                  desc = "Go back to the parent directory" },
+    { on = "<Enter>",       run = "enter",                  desc = "Enter the child directory" },
+    { on = "/",             run = "filter --smart",         desc = "Filter files" },
+    { on = "<C-Home>",      run = "arrow -9999999",         desc = "Move cursor to the top" },
+    { on = "<C-End>",       run = "arrow 9999999",          desc = "Move cursor to the bottom" },
+    { on = "<Delete>",      run = "remove",                 desc = "Trash selected files" },
+    { on = "<S-Delete>",    run = "remove --permanently",   desc = "Permanently delete selected files" },
 
-	{ on = [ "c", "d" ],	      run = "cd --interactive",		desc = "Jump interactive" },
-	{ on = [ "<Space>", "g" ],    run = "cd --interactive",		desc = "Jump interactive" },
-	{ on = [ "<Space>", "/" ],    run = "search --via=rg",		desc = "Search files by content via ripgrep" }
+    { on = [ "c", "d" ],        run = "cd --interactive",   desc = "Jump interactive" },
+    { on = [ "<Space>", "g" ],  run = "cd --interactive",   desc = "Jump interactive" },
+    { on = [ "<Space>", "/" ],  run = "search --via=rg",    desc = "Search files by content via ripgrep" }
 
 ]
 
 [tasks]
 prepend_keymap = [
-	{ on = "<Delete>", run = "cancel", desc = "Cancel the task" },
-	{ on = "d",		   run = "cancel", desc = "Cancel the task" }
+    { on = "<Delete>",  run = "cancel",     desc = "Cancel the task" },
+    { on = "d",         run = "cancel",     desc = "Cancel the task" }
 ]
 
 [input]
 prepend_keymap = [
-	{ on = "<Esc>", run = "close", desc = "Cancel input" }
+    { on = "<Esc>", run = "close",  desc = "Cancel input" }
 ]
 
 [completion]
 prepend_keymap = [
-	{ on = "<Esc>", run = "close", desc = "Cancel completion" }
+    { on = "<Esc>", run = "close",  desc = "Cancel completion" }
 ]
 
 [help]
 prepend_keymap = [
-    { on = "/", run = "filter", desc = "Apply a filter for the help items" }
+    { on = "/",     run = "filter", desc = "Apply a filter for the help items" }
 ]
