@@ -25,6 +25,7 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+alias su="su --shell=$(which zsh)"
 alias myip="curl ifconfig.me && echo"
 alias ls="ls --color=auto -lhA --group-directories-first"
 alias cls="clear && tput cup 1024 0"
