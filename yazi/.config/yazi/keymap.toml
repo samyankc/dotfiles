@@ -16,7 +16,7 @@ prepend_keymap = [
 
 [tasks]
 prepend_keymap = [
-	{ on = "<Delete>", run = "cancel", desc = "Cancel the task" }
+	{ on = "<Delete>", run = "cancel", desc = "Cancel the task" },
 	{ on = "d",		   run = "cancel", desc = "Cancel the task" }
 ]
 
