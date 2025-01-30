@@ -6,6 +6,7 @@ PROMPT="%B%F{green} %n  %F{cyan} %M  %F{yellow} %~%f%b
 %F{#919191}󱞪%f "
 
 # export CPPFLAGS="-std=c++23"
+export SHELL="$(which zsh)"
 export COLORTERM=truecolor
 export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
 export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
