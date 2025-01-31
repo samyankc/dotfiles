@@ -14,7 +14,7 @@ export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
 export PATH="$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$HOMEBREW_PREFIX/opt/binutils/bin:$PATH";
 export SUDO_EDITOR="$(which hx)"
 export EDITOR="$(which hx)"
-export FZF_DEFAULT_OPTS="-m --style=full --preview='chafa {} 2>/dev/null || bat -f {}'"
+export FZF_DEFAULT_OPTS="-m --style=full --preview='\chafa {} 2>/dev/null || \bat --line-range :200 --squeeze-blank -f {}'"
 export FZF_DEFAULT_COMMAND='fd -HILtf'
 
 function y() {
