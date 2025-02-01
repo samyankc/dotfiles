@@ -2,6 +2,7 @@
 prepend_keymap = [
     { on = "<Backspace>",   run = "leave",                  desc = "Go back to the parent directory" },
     { on = "<Enter>",       run = "enter",                  desc = "Enter the child directory" },
+    { on = "T",             run = "plugin max-preview",     desc = "Maximize preview pane" },
     { on = "/",             run = "filter --smart",         desc = "Filter files" },
     { on = "!",             run = 'shell "tmux -L tmux-yazi" --block', desc = "Open shell here" },
     { on = "<Home>",        run = "arrow -9999999",         desc = "Move cursor to the top" },
