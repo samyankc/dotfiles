@@ -30,7 +30,13 @@ alias su="su --shell=$(which zsh)"
 alias myip="curl ifconfig.me && echo"
 alias ls="ls --color=auto -lhA --group-directories-first"
 alias cls="clear && tput cup 1024 0"
-cls
+
+if [ -n "$YAZI_LEVEL" ]; then
+    PROMPT=" %F{yellow}[ Yazi Sub Shell ] %F{#919191}%B#%b%f "
+    clear
+else
+    cls
+fi
 
 ssh_host_list(){
   cat ~/.ssh/config | grep "Host "
