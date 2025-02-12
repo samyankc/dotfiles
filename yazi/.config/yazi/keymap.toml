@@ -5,8 +5,8 @@ prepend_keymap = [
     { on = "T",             run = "plugin max-preview",     desc = "Maximize preview pane" },
     { on = "/",             run = "filter --smart",         desc = "Filter files" },
     { on = "!",             run = 'shell "tmux -L tmux-yazi" --block', desc = "Open shell here" },
-    { on = "<Home>",        run = "arrow -9999999",         desc = "Move cursor to the top" },
-    { on = "<End>",         run = "arrow 9999999",          desc = "Move cursor to the bottom" },
+    { on = "<Home>",        run = "arrow top",              desc = "Move cursor to the top" },
+    { on = "<End>",         run = "arrow bot",              desc = "Move cursor to the bottom" },
     { on = "<Delete>",      run = "remove",                 desc = "Trash selected files" },
     { on = "<S-Delete>",    run = "remove --permanently",   desc = "Permanently delete selected files" },
 
