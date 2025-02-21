@@ -16,7 +16,12 @@ Header:children_add(function()
 	if ya.target_family() ~= "unix" then
 		return ""
 	end
-	return ui.Span(ya.user_name() .. "@" .. ya.host_name() .. ":"):fg("blue")
+	-- return ui.Span(ya.user_name() .. "@" .. ya.host_name() .. ":"):fg("blue")
+	return ui.Line{
+		ui.Span("   " .. ya.user_name()):fg("green"),
+		ui.Span("   " .. ya.host_name()):fg("cyan"),
+		ui.Span("   "):fg("yellow")
+	}
 end, 500, Header.LEFT)
 
 require("full-border"):setup {
