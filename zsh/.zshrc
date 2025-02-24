@@ -26,6 +26,16 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+function lg() {
+	export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir
+	lazygit "$@"
+	if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
+		cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
+		rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
+	fi
+}
+
+
 alias su="su --shell=$(which zsh)"
 alias myip="curl ifconfig.me && echo"
 alias ls="ls --color=auto -lhA --group-directories-first"
