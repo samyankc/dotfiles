@@ -1,0 +1,9 @@
+gui:
+  sidePanelWidth: 0.4
+  nerdFontsVersion: 3
+  theme:
+    selectedLineBgColor:
+      - bold
+      - '#404040'
+
+notARepository: skip
