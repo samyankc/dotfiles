@@ -17,8 +17,9 @@ select = "block"
 [editor.file-picker]
 hidden = false
 
-# [keys.normal]
-# ";"  = "command_mode"
+[keys.normal]
+";"  = "command_mode"
+"ret" = "append_mode"
 
 [editor.statusline]
 mode.normal = "  ---  N O R M A L  ---  "
