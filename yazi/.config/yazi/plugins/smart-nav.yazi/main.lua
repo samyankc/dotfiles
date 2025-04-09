@@ -11,12 +11,18 @@ local function notify_error(message)
   -- ya.manager_emit("shell",{"echo '"..message.."'",block=true})
 end
 
+local function NormalizeOffset(Offset)
+  if Offset == "prev" then return "-1" end
+  if Offset == "next" then return "1" end
+  return Offset    
+end
+
 local BuiltIn = {
   Escape = function() ya.manager_emit("escape",{}) end,
   Leave = function() ya.manager_emit("leave",{}) end,
   Enter = function() ya.manager_emit("enter",{}) end,
   Arrow = function(Offset) ya.manager_emit("arrow",{Offset}) end,
-  Seek = function(Offset) ya.manager_emit("seek",{Offset}) end,
+  Seek = function(Offset) ya.manager_emit("seek",{NormalizeOffset(Offset)}) end,
 }
 
 local function ResumePreview(st)
@@ -75,4 +81,3 @@ end
 local function enabled(st) return st.old ~= nil end
 
 return { entry = entry, enabled = enabled }
-  
