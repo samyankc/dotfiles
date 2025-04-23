@@ -5,12 +5,16 @@
 PROMPT="%B%F{green} %n  %F{cyan} %M  %F{yellow} %~%f%b
 %F{#919191}󱞪%f "
 
-# export CPPFLAGS="-std=c++23"
+# export CPPFLAGS="-std=c++26"
 export SHELL="$(which zsh)"
 export COLORTERM=truecolor
-export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
-export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
-export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
+if [[ $(uname) == "Darwin" ]]; then
+	export HOMEBREW_PREFIX="/opt/homebrew";
+else
+	export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
+fi
+export HOMEBREW_CELLAR="$HOMEBREW_PREFIX/Cellar";
+export HOMEBREW_REPOSITORY="$HOMEBREW_PREFIX/Homebrew";
 export PATH="$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$HOMEBREW_PREFIX/opt/binutils/bin:$PATH";
 export SUDO_EDITOR="$(which hx)"
 export EDITOR="$(which hx)"
@@ -38,7 +42,8 @@ function lg() {
 
 alias su="su --shell=$(which zsh)"
 alias myip="curl ifconfig.me && echo"
-alias ls="ls --color=auto -lhA --group-directories-first"
+# alias ls="ls --color=auto -lhA --group-directories-first"
+alias ls="ls --color=auto -lhA"
 alias cls="clear && tput cup 1024 0"
 
 if [ -n "$YAZI_LEVEL" ]; then
