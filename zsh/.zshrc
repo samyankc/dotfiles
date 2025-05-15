@@ -6,7 +6,6 @@ PROMPT="%B%F{green} %n  %F{cyan} %M  %F{yellow} %~%f%b
 %F{#919191}󱞪%f "
 
 # export CPPFLAGS="-std=c++26"
-export SHELL="$(which zsh)"
 export COLORTERM=truecolor
 if [[ $(uname) == "Darwin" ]]; then
 	export HOMEBREW_PREFIX="/opt/homebrew";
@@ -16,8 +15,10 @@ fi
 export HOMEBREW_CELLAR="$HOMEBREW_PREFIX/Cellar";
 export HOMEBREW_REPOSITORY="$HOMEBREW_PREFIX/Homebrew";
 export PATH="$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$HOMEBREW_PREFIX/opt/binutils/bin:$PATH";
-export SUDO_EDITOR="$(which hx)"
+export CXX="$(which g++-14)"
+export SHELL="$(which zsh)"
 export EDITOR="$(which hx)"
+export SUDO_EDITOR="$(which hx)"
 export FZF_DEFAULT_OPTS="-m --style=full --preview='\chafa {} 2>/dev/null || \bat --line-range :200 --squeeze-blank -f {}'"
 export FZF_DEFAULT_COMMAND='fd -HILtf'
 
