@@ -1,6 +1,6 @@
 [language-server.clangd]
 command = "clangd"
-args = ["--enable-config", "--header-insertion=never", "--malloc-trim", "--query-driver=/home/linuxbrew/.linuxbrew/bin/g++-14"]
+args = ["--enable-config", "--header-insertion=never", "--malloc-trim", "--query-driver=/home/linuxbrew/.linuxbrew/bin/g++-15"]
 
 [[language]]
 name = "cpp"
