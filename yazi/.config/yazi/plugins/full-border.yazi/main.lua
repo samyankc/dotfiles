@@ -1,4 +1,4 @@
---- @since 25.2.26
+--- @since 25.5.28
 
 local function setup(_, opts)
 	local type = opts and opts.type or ui.Border.ROUNDED

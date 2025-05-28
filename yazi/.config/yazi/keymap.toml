@@ -1,4 +1,4 @@
-[manager]
+[mgr]
 prepend_keymap = [
     { on = "/",             run = "filter --smart",         desc = "Filter files" },
     { on = "!",             run = 'shell "tmux -L tmux-yazi" --block', desc = "Open shell here" },

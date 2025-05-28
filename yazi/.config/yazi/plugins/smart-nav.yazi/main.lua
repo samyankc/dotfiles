@@ -1,4 +1,5 @@
 --- @sync entry
+--- @since 25.5.28
 
 local function notify_error(message)
   if type(message) == "string" then
@@ -8,7 +9,7 @@ local function notify_error(message)
       timeout = 3
     })
   end
-  -- ya.manager_emit("shell",{"echo '"..message.."'",block=true})
+  -- ya.emit("shell",{"echo '"..message.."'",block=true})
 end
 
 local function NormalizeOffset(Offset)
@@ -18,17 +19,17 @@ local function NormalizeOffset(Offset)
 end
 
 local BuiltIn = {
-  Escape = function() ya.manager_emit("escape",{}) end,
-  Leave = function() ya.manager_emit("leave",{}) end,
-  Enter = function() ya.manager_emit("enter",{}) end,
-  Arrow = function(Offset) ya.manager_emit("arrow",{Offset}) end,
-  Seek = function(Offset) ya.manager_emit("seek",{NormalizeOffset(Offset)}) end,
+  Escape = function() ya.emit("escape",{}) end,
+  Leave = function() ya.emit("leave",{}) end,
+  Enter = function() ya.emit("enter",{}) end,
+  Arrow = function(Offset) ya.emit("arrow",{Offset}) end,
+  Seek = function(Offset) ya.emit("seek",{NormalizeOffset(Offset)}) end,
 }
 
 local function ResumePreview(st)
   if st.old == nil then return false end
   Tab.layout, st.old = st.old, nil
-  ya.app_emit("resize", {})
+  ya.emit("app:resize", {})
   return true
 end
 
@@ -52,7 +53,7 @@ local ActionTable = {
               })
               :split(self._area)
         end
-        ya.app_emit("resize", {})
+        ya.emit("app:resize", {})
       end
     end
   end,
