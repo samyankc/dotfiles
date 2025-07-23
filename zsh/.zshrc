@@ -44,10 +44,11 @@ function lg() {
 
 
 alias su="su --shell=$(which zsh)"
-alias myip="curl ifconfig.me && echo"
+alias myip="curl -Ls ifconfig.me && echo"
 # alias ls="ls --color=auto -lhA --group-directories-first"
 alias ls="ls --color=auto -lhA"
 alias cls="clear && tput cup 1024 0"
+alias somo="sudo $(which somo) -c"
 
 if [ -n "$YAZI_LEVEL" ]; then
     PROMPT=" %F{yellow}[ Yazi Sub Shell ] %F{#919191}%B#%b%f "
@@ -58,4 +59,12 @@ fi
 
 ssh_host_list(){
   cat ~/.ssh/config | grep "Host "
+}
+
+locate(){
+  if (( $# == 0 )); then 
+    echo Please provide IP as command argument.
+    return 1
+  fi
+  curl -Ls https://json.geoiplookup.io/$1 | jq -r '"\(.city), \(.country_name)"'
 }
