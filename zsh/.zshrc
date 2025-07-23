@@ -46,7 +46,7 @@ function lg() {
 alias su="su --shell=$(which zsh)"
 alias myip="curl -Ls ifconfig.me && echo"
 alias ls="ls --color=auto -lhA"
-alias lsr="lsr -lA --group-directories-first"
+alias lsr="lsr -lA --group-directories-first --hyperlinks=never"
 alias cls="clear && tput cup 1024 0"
 alias somo="sudo $(which somo) -c"
 
