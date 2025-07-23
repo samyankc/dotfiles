@@ -57,6 +57,14 @@ else
     cls
 fi
 
+ssh_local(){
+  if [[ $# -lt 2 ]]; then
+    echo Syntax: ssh_local socket user
+  else
+    ssh -o "ProxyCommand nc -U $1" $2@localhost
+  fi
+}
+
 ssh_host_list(){
   cat ~/.ssh/config | grep "Host "
 }
