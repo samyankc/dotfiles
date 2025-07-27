@@ -76,3 +76,12 @@ locate(){
   fi
   curl -Ls https://json.geoiplookup.io/$1 | jq -r '"\(.city), \(.country_name)"'
 }
+
+blockip(){
+  if (( $# == 0 )); then
+    echo Please provide IP as command argument.
+    return 1
+  fi
+  echo Append $1 to ipatbles for drop
+        sudo iptables -A INPUT -s $1 -j DROP
+}
