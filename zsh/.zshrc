@@ -83,5 +83,5 @@ blockip(){
     return 1
   fi
   echo Append $1 to ipatbles for drop
-        sudo iptables -A INPUT -s $1 -j DROP
+  sudo iptables -A INPUT -s $1 -j DROP
 }
