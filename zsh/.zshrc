@@ -69,14 +69,6 @@ ssh_host_list(){
   cat ~/.ssh/config | grep "Host "
 }
 
-locate(){
-  if (( $# == 0 )); then 
-    echo Please provide IP as command argument.
-    return 1
-  fi
-  curl -Ls https://json.geoiplookup.io/$1 | jq -r '"\(.city), \(.country_name)"'
-}
-
 blockip(){
   if (( $# == 0 )); then
     echo Please provide IP as command argument.
@@ -84,4 +76,18 @@ blockip(){
   fi
   echo Append $1 to ipatbles for drop
   sudo iptables -A INPUT -s $1 -j DROP
+}
+
+locate(){
+  if (( $# == 0 )); then 
+    echo Please provide IP as command argument.
+    return 1
+  fi
+  curl -Ls https://json.geoiplookup.io/$1 | jq -r '"\(.city), \(.country_name)"'
+
+  if read -q "choice?Block IP ? [y/n] "; then
+    blockip $1
+  else
+    echo;
+  fi
 }
