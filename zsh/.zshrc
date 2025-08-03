@@ -85,7 +85,7 @@ locate(){
   fi
   curl -Ls https://json.geoiplookup.io/$1 | jq -r '"\(.city), \(.country_name)"'
 
-  if read -q "choice?Block IP ? [y/n] "; then
+  if read -q "?Block IP ? [y/n] " && echo; then
     blockip $1
   else
     echo;
