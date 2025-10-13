@@ -1,0 +1,9 @@
+settings:
+  tailMode: 200
+  updateInterval: 5
+  disableAutoUpdate: false
+  disableColor: false
+  disableMouse: false
+  disableTimestamp: false
+  onlyStream: false
+  disableFastMode: false
