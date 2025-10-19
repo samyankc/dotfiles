@@ -1,6 +1,3 @@
-export LANG='"C.UTF-8"'
-export LC_ALL='"C.UTF-8"'
-export LANGUAGE='"C.UTF-8"'
 export COLORTERM=truecolor
 if [[ $(uname) == "Darwin" ]]; then
 	export HOMEBREW_PREFIX="/opt/homebrew";
