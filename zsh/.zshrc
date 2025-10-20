@@ -29,6 +29,7 @@ alias ls="ls --color=auto -lhA"
 alias lsr="lsr -lA --group-directories-first --hyperlinks=never"
 alias cls="clear && tput cup 1024 0"
 alias somo="sudo $(which somo) -c"
+alias bandwhich="sudo $(which bandwhich)"
 
 if [ -n "$YAZI_LEVEL" ]; then
     PROMPT=" %F{yellow}[ Yazi Sub Shell ] %F{#919191}%B#%b%f "
@@ -36,6 +37,19 @@ if [ -n "$YAZI_LEVEL" ]; then
 else
     cls
 fi
+
+dotfiles_update(){
+  DF=$HOME/dotfiles; \
+  curl -L -o $DF.tar.gz https://github.com/samyankc/dotfiles/archive/refs/heads/main.tar.gz && \
+  \mkdir -p $DF && \
+  tar -xf $DF.tar.gz -C $DF --strip-components=1 && \
+  \rm -rf $DF.copy && \
+  \cp -rf $DF $DF.copy && \
+  \ls -d $DF/*/ | xargs -n 1 basename | xargs stow -t $HOME -d $DF --adopt && \
+  \rm -rf $DF $DF.tar.gz && \
+  \mv -f $DF.copy $DF \
+  ;unset DF
+}
 
 ssh_local(){
   if [[ $# -lt 2 ]]; then
