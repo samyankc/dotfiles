@@ -31,6 +31,7 @@ alias lsr="lsr -lA --group-directories-first --hyperlinks=never"
 alias cls="clear && tput cup 1024 0"
 alias somo="sudo $(which somo) -c"
 alias bandwhich="sudo $(which bandwhich)"
+alias delta="delta --diff-highlight -n --line-numbers-minus-style=#E06C75 --line-numbers-plus-style=#98C379"
 
 if [ -n "$YAZI_LEVEL" ]; then
     PROMPT=" %F{yellow}[ Yazi Sub Shell ] %F{#919191}%B#%b%f "
