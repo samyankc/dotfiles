@@ -16,3 +16,4 @@ export EDITOR="$(which hx)"
 export SUDO_EDITOR="$(which hx)"
 export FZF_DEFAULT_OPTS="-m --style=full --preview='\bat --line-range :200 --squeeze-blank -f {}'"
 export FZF_DEFAULT_COMMAND='fd -HILtf'
+export GIT_EXTERNAL_DIFF='difft'

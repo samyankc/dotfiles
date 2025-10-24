@@ -6,4 +6,9 @@ gui:
       - bold
       - '#404040'
 
+git:
+  paging:
+    pager: delta --diff-highlight --paging=never -n --line-numbers-minus-style="#E06C75" --line-numbers-plus-style="#98C379"
+    # externalDiffCommand: difft
+
 notARepository: skip
