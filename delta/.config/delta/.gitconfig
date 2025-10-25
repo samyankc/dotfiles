@@ -1,10 +1,12 @@
 [delta]
     navigate = true  # use n and N to move between diff sections
-    # dark = true
+    features = DEFAULT
+
+[delta "DEFAULT"]
+    dark = true
     line-numbers = true
     line-numbers-minus-style = "#E06C75"
     line-numbers-plus-style = "#98C379"
-
 # To use these themes, first include this file in your own gitconfig file:
 #
 # [include]
