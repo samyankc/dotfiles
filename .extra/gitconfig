@@ -1,0 +1,16 @@
+[alias]
+    dtf-log = -c diff.external=difft log -p --ext-diff
+    dtf-show = -c diff.external=difft show --ext-diff
+    dft-diff = -c diff.external=difft diff
+
+[difftool "difftastic"]
+    cmd = difft "$MERGED" "$LOCAL"
+
+[difftool]
+    prompt = false
+
+[pager]
+    difftool = true
+
+[diff]
+    tool = difftastic

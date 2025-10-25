@@ -5,6 +5,10 @@
 PROMPT="%B%F{green} %n  %F{cyan} %M  %F{yellow} %~%f%b
 %F{#919191}󱞪%f "
 
+local GIT_EXTRA_CONFIG_FILE=$HOME/dotfiles/.extra/gitconfig
+git config get --global --all --fixed-value --value="$GIT_EXTRA_CONFIG_FILE" include.path > /dev/null 2>&1 \
+|| git config set --global --append include.path "$GIT_EXTRA_CONFIG_FILE"
+
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
