@@ -1,6 +1,6 @@
 [alias]
-    dtf-log = -c diff.external=difft log -p --ext-diff
-    dtf-show = -c diff.external=difft show --ext-diff
+    dft-log = -c diff.external=difft log -p --ext-diff
+    dff-show = -c diff.external=difft show --ext-diff
     dft-diff = -c diff.external=difft diff
 
 [difftool "difftastic"]
