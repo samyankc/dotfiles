@@ -5,9 +5,19 @@
 PROMPT="%B%F{green} %n  %F{cyan} %M  %F{yellow} %~%f%b
 %F{#919191}󱞪%f "
 
-local GIT_EXTRA_CONFIG_FILE=$HOME/dotfiles/.extra/gitconfig
-git config get --global --all --fixed-value --value="$GIT_EXTRA_CONFIG_FILE" include.path > /dev/null 2>&1 \
-|| git config set --global --append include.path "$GIT_EXTRA_CONFIG_FILE"
+function include_gitconfig(){
+  if (( $# == 0 )); then
+    echo requires file path as command argument.
+    return 1
+  fi
+  local CONFIG_FILE=$1  
+  [ ! -f "$CONFIG_FILE" ] \
+  || git config get --global --all --fixed-value --value="$CONFIG_FILE" include.path > /dev/null 2>&1 \
+  || git config set --global --append include.path "$CONFIG_FILE"  
+}
+
+include_gitconfig "$HOME/.config/delta/.gitconfig"
+include_gitconfig "$HOME/.config/difftastic/.gitconfig"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -35,7 +45,10 @@ alias lsr="lsr -lA --group-directories-first --hyperlinks=never"
 alias cls="clear && tput cup 1024 0"
 alias somo="sudo $(which somo) -c"
 alias bandwhich="sudo $(which bandwhich)"
-alias delta="delta --diff-highlight -n --line-numbers-minus-style=#E06C75 --line-numbers-plus-style=#98C379"
+alias delta="delta --diff-highlight --line-numbers-minus-style=#E06C75 --line-numbers-plus-style=#98C379"
+alias dft-git-log="git dft-log"
+alias dft-git-show="git dft-show"
+alias dft-git-diff="git dft-diff"
 
 if [ -n "$YAZI_LEVEL" ]; then
     PROMPT=" %F{yellow}[ Yazi Sub Shell ] %F{#919191}%B#%b%f "
