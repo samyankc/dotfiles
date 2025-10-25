@@ -7,33 +7,6 @@
     line-numbers = true
     line-numbers-minus-style = "#E06C75"
     line-numbers-plus-style = "#98C379"
-# To use these themes, first include this file in your own gitconfig file:
-#
-# [include]
-#     path = PATH/TO/delta/themes.gitconfig
-#
-# Then, in your own gitconfig file, activate the chosen theme, e.g.
-#
-# [delta]
-#    features = kingfisher
-#
-# Please add your own themes to this file, and open a PR.
-#
-# Instructions:
-#
-# 1. The name of the theme must be the name of some sort of wild organism:
-#    mammal, bird, plant, mollusk -- whatever. It can be in any language.
-#
-# 2. Use `delta --show-config` to list all the style settings that are active in
-#    your current delta environment, but only include settings in your theme
-#    that are essential to its appearance.
-#
-# 3. Include either `dark = true` or `light = true` according to whether it is
-#    designed for a light or dark terminal background. (This marks a feature as
-#    a "theme", causing it to be picked up by `delta --show-themes`).
-#
-# 4. Feel free to include a comment line indicating who is the author of the
-#    theme. E.g. a link to your github user page.
 
 [delta "colibri"]
     # author: https://github.com/pablospe
@@ -87,57 +60,6 @@
     plus-style = syntax "#001a00"
     syntax-theme = Nord
 
-[delta "coracias-caudatus"]
-    # author: https://github.com/clnoll
-    commit-decoration-style = ol "#7536ff"
-    commit-style = "#200078"
-    file-decoration-style = none
-    file-style = omit
-    hunk-header-decoration-style = "#cfd6ff" ul
-    hunk-header-file-style = "#858dff"
-    hunk-header-line-number-style = "#7536ff"
-    hunk-header-style = file line-number syntax
-    light = true
-    line-numbers = true
-    line-numbers-left-format = "{nm:>4} ."
-    line-numbers-left-style = "#e3ab02"
-    line-numbers-minus-style = "#ff38b6"
-    line-numbers-plus-style = "#00e0c2"
-    line-numbers-right-format = "{np:>4}  "
-    line-numbers-right-style = white
-    line-numbers-zero-style = "#cccccc"
-    minus-emph-style = bold "#ff3838" "#ffe3f7"
-    minus-style = "#ff0080"
-    plus-emph-style = "#008a81" bold "#00ffbf"
-    plus-style = syntax "#cffff3"
-    syntax-theme = GitHub
-
-[delta "hoopoe"]
-    # author: https://github.com/dandavison
-    light = true
-    pink = "#ffe0e0"
-    dark-pink = "#ffc0c0"
-    green = "#d0ffd0"
-    dark-green = "#a0efa0"
-    dark-green-2 = "#067a00"
-    minus-style = normal hoopoe.pink
-    minus-emph-style = normal hoopoe.dark-pink
-    minus-non-emph-style = minus-style
-    plus-style = syntax hoopoe.green
-    plus-emph-style = syntax hoopoe.dark-green
-    plus-non-emph-style = plus-style
-    minus-empty-line-marker-style = minus-style
-    plus-empty-line-marker-style = plus-style
-    commit-decoration-style = blue ol
-    commit-style = raw
-    file-style = omit
-    hunk-header-decoration-style = blue box
-    hunk-header-file-style = red
-    hunk-header-line-number-style = hoopoe.dark-green-2
-    hunk-header-style = file line-number syntax
-    syntax-theme = GitHub
-    zero-style = syntax
-
 [delta "tangara-chilensis"]
     # author: https://github.com/clnoll
     commit-decoration-style = bold box ul "#34fd50"
@@ -158,7 +80,6 @@
     minus-style = normal "#990017"
     plus-emph-style = syntax "#03a4ff"
     plus-style = syntax "#450eff"
-    side-by-side = true
     syntax-theme = Vibrant Sunburst
 
 [delta "villsau"]
@@ -246,7 +167,6 @@
 [delta "mantis-shrimp"]
     #author: https://github.com/2kabhishek
     dark = true
-    side-by-side = true
     keep-plus-minus-markers = true
     hyperlinks = true
     file-added-label = [+]
@@ -280,7 +200,6 @@
 [delta "mantis-shrimp-lite"]
     #author: https://github.com/2kabhishek
     dark = true
-    side-by-side = true
     keep-plus-minus-markers = true
     file-added-label = [+]
     file-copied-label = [==]
@@ -338,7 +257,6 @@
     #author: https://github.com/AirOnSkin
     dark = true
     line-numbers = true
-    side-by-side = true
     keep-plus-minus-markers = false
     syntax-theme = Nord
     file-style = "#434C5E" bold
@@ -454,7 +372,6 @@
     dark = true
     syntax-theme = base16
     line-numbers = true
-    side-by-side = true
     file-style = brightwhite
     file-decoration-style = none
     file-added-label = [+]
@@ -549,7 +466,6 @@
 [delta "platypus"]
     # Author: https://github.com/sarpuser
     dark = true
-    side-by-side = true
     true-color = always
     file-added-label = [+]
     file-copied-label = [==]
@@ -627,50 +543,3 @@
     hunk-header-file-style = olive
     hunk-header-line-number-style = orange
     hunk-header-style = file line-number orchid
-
-[delta "mirthful-willow"]
-    # See 'weeping-willow' for dark mode version.
-    # Heavily inspired by the themes above. Thank you. <3
-    # author: https://github.com/lvdh
-    # colors: `pastel list`
-    light = true
-    right-arrow = >
-    syntax-theme = Coldark-Cold
-    # -- git
-    blame-format = " ({commit:>7}) {author:<18} {timestamp:^13} "
-    blame-palette = "powderblue papayawhip thistle skyblue lavender plum paleturquoise lightcyan violet"
-    commit-decoration-style = none
-    commit-style = bold black orange
-    # -- grep
-    grep-file-style = darkgoldenrod
-    grep-line-number-style = darkgoldenrod
-    # -- diff
-    keep-plus-minus-markers = true
-    line-numbers = true
-    line-numbers-minus-style = red
-    line-numbers-plus-style = green
-    line-numbers-left-style = gray
-    line-numbers-left-format = "{nm:>1}┊"
-    line-numbers-right-style = gray
-    line-numbers-right-format = "{np:>1}┊"
-    line-numbers-zero-style = gray
-    minus-emph-style = ghostwhite tomato underline
-    minus-empty-line-marker-style = syntax orangered
-    minus-style = syntax lightpink
-    plus-emph-style = ghostwhite limegreen underline
-    plus-empty-line-marker-style = syntax forestgreen
-    plus-style = syntax lightgreen
-    whitespace-error-style = black ghostwhite
-    zero-style = syntax
-    # -- decorations
-    file-decoration-style = darkgoldenrod overline
-    file-added-label = [+]
-    file-copied-label = [*]
-    file-modified-label = [~]
-    file-removed-label = [-]
-    file-renamed-label = [>]
-    file-style = orange bold
-    hunk-header-decoration-style = none
-    hunk-header-file-style = darkgoldenrod
-    hunk-header-line-number-style = orange
-    hunk-header-style = file line-number darkviolet

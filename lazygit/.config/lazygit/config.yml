@@ -8,7 +8,7 @@ gui:
 
 git:
   paging:
-    pager: delta --diff-highlight --paging=never
+    pager: delta --paging=never
     # externalDiffCommand: difft
 
 notARepository: skip
