@@ -1,12 +1,10 @@
 [delta]
     navigate = true  # use n and N to move between diff sections
-    features = override-line-number-color
-
-[delta "override-line-number-color"]
-    dark = true
-    line-numbers = true
-    line-numbers-minus-style = "#E06C75"
-    line-numbers-plus-style = "#98C379"
+    features = chameleon
+    # dark = true
+    # line-numbers = true
+    # line-numbers-minus-style = "#E06C75"
+    # line-numbers-plus-style = "#98C379"
 
 [delta "collared-trogon"]
     # author: https://github.com/clnoll
@@ -30,32 +28,6 @@
     plus-style = syntax "#001a00"
     syntax-theme = Nord
 
-[delta "zebra-dark"]
-    minus-style = syntax "#330f0f"
-    minus-emph-style = syntax "#4f1917"
-    plus-style = syntax "#0e2f19"
-    plus-emph-style = syntax "#174525"
-    map-styles = \
-       bold purple => syntax "#330f29", \
-       bold blue => syntax "#271344", \
-       bold cyan => syntax "#0d3531", \
-       bold yellow => syntax "#222f14"
-    zero-style = syntax
-    whitespace-error-style = "#aaaaaa"
-
-[delta "zebra-light"]
-    minus-style = syntax "#fbdada"
-    minus-emph-style = syntax "#f6b6b6"
-    plus-style = syntax "#d6ffd6"
-    plus-emph-style = syntax "#adffad"
-    map-styles = \
-       bold purple => syntax "#feecf7", \
-       bold blue => syntax "#e5dff6", \
-       bold cyan => syntax "#d8fdf6", \
-       bold yellow => syntax "#f4ffe0"
-    zero-style = syntax
-    whitespace-error-style = "#aaaaaa"
-
 [delta "chameleon"]
     #author: https://github.com/AirOnSkin
     dark = true
@@ -70,19 +42,21 @@
     file-removed-label = [-]
     file-renamed-label = [->]
     hunk-header-style = omit
-    line-numbers-left-format = " {nm:>3} │"
+    line-numbers-left-format = " {nm:>3}│"
     line-numbers-left-style = red
-    line-numbers-right-format = " {np:>3} │"
+    line-numbers-right-format = " {np:>3}│"
     line-numbers-right-style = green
-    line-numbers-minus-style = red italic black
-    line-numbers-plus-style = green italic black
+    # line-numbers-minus-style = red italic black
+    # line-numbers-plus-style = green italic black
+    line-numbers-minus-style = red italic
+    line-numbers-plus-style = green italic
     line-numbers-zero-style = "#434C5E" italic
     minus-style = bold red
     minus-emph-style = bold "#202020" "#FF5555"
-    minus-non-emph-style = bold
+    # minus-non-emph-style = bold
     plus-style = bold green
     plus-emph-style = bold "#202020" "#50FA7B"
-    plus-non-emph-style = bold
+    # plus-non-emph-style = bold
     zero-style = syntax
     blame-code-style = syntax
     blame-format = "{author:<18} ({commit:>9}) {timestamp:^16}"
@@ -93,32 +67,6 @@
     merge-conflict-ours-diff-header-decoration-style = "#434C5E" box
     merge-conflict-theirs-diff-header-style = "#F1FA8C" bold
     merge-conflict-theirs-diff-header-decoration-style = "#434C5E" box
-
-[delta "discord"]
-    commit-style                  = omit
-    file-style                    = 34 ul
-    file-decoration-style         = none
-    hunk-header-style             = omit
-    minus-style                   = 31
-    minus-non-emph-style          = 31
-    minus-emph-style              = 40
-    minus-empty-line-marker-style = 31
-    zero-style                    = 30
-    plus-style                    = 32
-    plus-non-emph-style           = 32
-    plus-emph-style               = 40
-    grep-file-style               = 34
-    grep-line-number-style        = 34
-    whitespace-error-style        = 41
-    blame-code-style              = omit
-    true-color                    = never
-    file-modified-label           = changed:
-    right-arrow                   = >
-    hyperlinks                    = false
-    keep-plus-minus-markers       = true
-    diff-stat-align-width         = 10
-    syntax-theme                  = none
-    width                         = variable
 
 [delta "mellow-barbet"]
     # author: https://github.com/kvrohit
