@@ -4,7 +4,7 @@
     dft-diff = -c diff.external=difft diff
 
 [difftool "difftastic"]
-    cmd = difft "$MERGED" "$LOCAL"
+    cmd = difft "$LOCAL" "$REMOTE"
 
 [difftool]
     prompt = false
