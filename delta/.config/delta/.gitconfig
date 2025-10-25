@@ -1,6 +1,6 @@
 [delta]
     navigate = true  # use n and N to move between diff sections
-    dark = true
+    # dark = true
     line-numbers = true
     line-numbers-minus-style = "#E06C75"
     line-numbers-plus-style = "#98C379"
