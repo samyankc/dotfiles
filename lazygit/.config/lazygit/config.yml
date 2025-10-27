@@ -8,7 +8,7 @@ gui:
 
 git:
   paging:
-    pager: delta --paging=never
+    pager: delta --features=for-lazygit
     # externalDiffCommand: difft
 
 notARepository: skip
