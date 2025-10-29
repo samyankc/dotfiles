@@ -6,9 +6,23 @@ gui:
       - bold
       - '#404040'
 
+spinner:
+    frames:
+      - '⠋'
+      - '⠙'
+      - '⠹'
+      - '⠸'
+      - '⠼'
+      - '⠴'
+      - '⠦'
+      - '⠧'
+      - '⠇'
+      - '⠏'
+
 git:
   paging:
     pager: delta --features=for-lazygit
     # externalDiffCommand: difft
 
 notARepository: skip
+promptToReturnFromSubprocess: false
