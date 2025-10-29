@@ -10,11 +10,12 @@
     prompt = false
 
 [core]
-    pager = less -R
+    pager = less -+FX
 
 [pager]
     difftool = true
 
 [diff]
     tool = difftastic
+
 
