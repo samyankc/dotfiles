@@ -6,7 +6,7 @@ gui:
       - bold
       - '#404040'
 
-spinner:
+  spinner:
     frames:
       - '⠋'
       - '⠙'
@@ -26,3 +26,4 @@ git:
 
 notARepository: skip
 promptToReturnFromSubprocess: false
+
