@@ -8,6 +8,7 @@ gui:
 
   spinner:
     frames:
+      # https://andreichiril.neocities.org/braille
       # - '⠋'
       # - '⠙'
       # - '⠹'
@@ -49,6 +50,7 @@ git:
 
 notARepository: skip
 promptToReturnFromSubprocess: false
+
 
 
 
