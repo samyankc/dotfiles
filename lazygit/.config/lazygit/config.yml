@@ -18,14 +18,14 @@ gui:
       # - '⠧'
       # - '⠇'
       # - '⠏'
-      - '⡿'
-      - '⣟'
-      - '⣯'
-      - '⣷'
-      - '⣾'
-      - '⣽'
-      - '⣻'
       - '⢿'
+      - '⣻'
+      - '⣽'
+      - '⣾'
+      - '⣷'
+      - '⣯'
+      - '⣟'
+      - '⡿'
 
 git:
   paging:
@@ -34,5 +34,6 @@ git:
 
 notARepository: skip
 promptToReturnFromSubprocess: false
+
 
 
