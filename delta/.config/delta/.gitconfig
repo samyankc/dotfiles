@@ -13,6 +13,10 @@
     line-numbers-left-format = "{nm:>3}"
     paging = never
 
+[delta "for-lazygit-side-by-side"]
+    features = chameleon-modify
+    paging = never
+
 [delta "chameleon-modify"]
     dark = true
     side-by-side = true
@@ -187,3 +191,4 @@
     merge-conflict-ours-diff-header-decoration-style = "#5E81AC" box
     merge-conflict-theirs-diff-header-style = yellow bold
     merge-conflict-theirs-diff-header-decoration-style = "#5E81AC" box
+
