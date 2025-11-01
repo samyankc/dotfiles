@@ -18,24 +18,25 @@ gui:
       # - '⣟'
       # - '⡿'
       #
-      - '⣏⣀ |'
-      - '⣏⡁ |'
-      - '⣏⠉ |'
-      - '⡏⠙ |'
-      - '⠏⠹ |'
-      - '⠋⢹ |'
-      - '⠉⣹ |'
-      - '⢈⣹ |'
-      - '⣀⣹ |'
-      - '⣄⣸ |'
-      - '⣆⣰ |'
-      - '⣇⣠ |'
-
+      - '⣏⣀ '
+      - '⣏⡁ '
+      - '⣏⠉ '
+      - '⡏⠙ '
+      - '⠏⠹ '
+      - '⠋⢹ '
+      - '⠉⣹ '
+      - '⢈⣹ '
+      - '⣀⣹ '
+      - '⣄⣸ '
+      - '⣆⣰ '
+      - '⣇⣠ '
 
 git:
-  paging:
-    pager: delta --features=for-lazygit
-    # externalDiffCommand: difft
+  pagers:
+    - pager: delta --features=for-lazygit
+    - pager: delta --features=for-lazygit-side-by-side
+    - externalDiffCommand: difft
+    # - useExternalDiffGitConfig: true
 
 notARepository: skip
 promptToReturnFromSubprocess: false
