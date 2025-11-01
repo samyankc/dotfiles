@@ -1,5 +1,5 @@
 gui:
-  sidePanelWidth: 0.4
+  sidePanelWidth: 0.34
   nerdFontsVersion: 3
   theme:
     selectedLineBgColor:
@@ -35,11 +35,12 @@ git:
   pagers:
     - pager: delta --features=for-lazygit
     - pager: delta --features=for-lazygit-side-by-side
-    - externalDiffCommand: difft
+    # - externalDiffCommand: difft
     # - useExternalDiffGitConfig: true
 
 notARepository: skip
 promptToReturnFromSubprocess: false
+
 
 
 
