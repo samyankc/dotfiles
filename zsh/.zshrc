@@ -37,6 +37,13 @@ function lg() {
 	fi
 }
 
+function sshz() {
+  ChosenHost=$(rg --pcre2 -o '(?<=^\s{0,10}Host\s)\b[\w.-]+\b' ~/.ssh/config | fzf --layout=reverse --height=40% --border --preview '')
+  if [[ -n "$ChosenHost" ]]; then
+    ssh $ChosenHost
+  fi
+}
+
 alias su="su --shell=$(which zsh)"
 alias myip="curl -Ls ifconfig.me && echo"
 alias lj="lazyjournal"
@@ -75,10 +82,6 @@ ssh_local(){
   else
     ssh -o "ProxyCommand nc -U $1" $2@localhost
   fi
-}
-
-ssh_host_list(){
-  cat ~/.ssh/config | grep "Host "
 }
 
 blockip(){
