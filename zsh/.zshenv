@@ -1,12 +1,15 @@
 export COLORTERM=truecolor
-if [[ $(uname) == "Darwin" ]]; then
-	export HOMEBREW_PREFIX="/opt/homebrew";
-else
-	export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
+if [[ "$TERM" == "xterm-ghostty" ]]; then
+	export TERM="xterm-256color"
 fi
-export HOMEBREW_CELLAR="$HOMEBREW_PREFIX/Cellar";
-export HOMEBREW_REPOSITORY="$HOMEBREW_PREFIX/Homebrew";
-export PATH="$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$HOMEBREW_PREFIX/opt/binutils/bin:$PATH";
+if [[ $(uname) == "Darwin" ]]; then
+	export HOMEBREW_PREFIX="/opt/homebrew"
+else
+	export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
+fi
+export HOMEBREW_CELLAR="$HOMEBREW_PREFIX/Cellar"
+export HOMEBREW_REPOSITORY="$HOMEBREW_PREFIX/Homebrew"
+export PATH="$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$HOMEBREW_PREFIX/opt/binutils/bin:$PATH"
 # export CPPFLAGS="-std=c++26"
 export C_INCLUDE_PATH="$HOMEBREW_PREFIX/include:$C_INCLUDE_PATH"
 export CPLUS_INCLUDE_PATH="$HOMEBREW_PREFIX/include:$CPLUS_INCLUDE_PATH"
