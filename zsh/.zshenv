@@ -1,7 +1,4 @@
 export COLORTERM=truecolor
-if [[ "$TERM" == "xterm-ghostty" ]]; then
-	export TERM="xterm-256color"
-fi
 if [[ $(uname) == "Darwin" ]]; then
 	export HOMEBREW_PREFIX="/opt/homebrew"
 else
