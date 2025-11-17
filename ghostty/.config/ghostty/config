@@ -4,13 +4,17 @@ term = xterm-256color
 # theme = Snazzy
 theme = One Half Dark
 
+freetype-load-flags = no-hinting, no-autohint
 font-synthetic-style = false
-font-size = 14.0
 font-family = Maple Mono NF
+font-size = 12.0
+adjust-cell-width = 8%
+adjust-cursor-thickness = 100%
 
 shell-integration = none
 cursor-style = bar
-
+#cursor-color = #8BE9FD
+#cursor-opacity = 0.6
 
 # gtk-titlebar = false
 gtk-titlebar-hide-when-maximized = true
@@ -19,8 +23,8 @@ gtk-toolbar-style = flat
 
 window-theme = ghostty
 
-background = #2e2e32
-window-titlebar-background = #2e2e32
+background = #2E2E32
+window-titlebar-background = #2E2E32
 # background = #222226
 # window-titlebar-background = #222226
 
@@ -28,7 +32,6 @@ window-padding-x = 8
 window-padding-y = 4
 window-padding-balance = true
 
-window-height = 28
+window-height = 30
 window-width = 120
-
 
