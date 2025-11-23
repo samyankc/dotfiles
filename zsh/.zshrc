@@ -84,6 +84,10 @@ ssh_local(){
   fi
 }
 
+list_ddos(){
+  somo -s remote_address --no-pager | rg '443.*synrecv' | rg -o '\d+(?:\.\d+){3}'
+}
+
 blockip(){
   if (( $# == 0 )); then
     echo Please provide IP as command argument.
