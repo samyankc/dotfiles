@@ -32,6 +32,6 @@ window-padding-x = 8
 window-padding-y = 4
 window-padding-balance = true
 
-window-height = 30
-window-width = 120
-
+# has to be 41 in this setting combo so that effective height is 31 Lines
+window-height = 41
+window-width = 140
