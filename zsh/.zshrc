@@ -38,7 +38,7 @@ function lg() {
 }
 
 function sshz() {
-  ChosenHost=$(rg --pcre2 -o '(?<=^\s{0,10}Host\s)\b[\w.-]+\b' ~/.ssh/config | fzf --layout=reverse --height=40% --border --preview '')
+  ChosenHost=$(rg --pcre2 -o '(?<=^\s{0,10}Host\s)\b[\w.-]+\b' ~/.ssh/config | fzf --layout=reverse --height=~40% --border --preview '')
   if [[ -n "$ChosenHost" ]]; then
     ssh $ChosenHost
   fi
@@ -84,10 +84,6 @@ ssh_local(){
   fi
 }
 
-list_ddos(){
-  somo -s remote_address --no-pager | rg '443.*synrecv' | rg -o '\d+(?:\.\d+){3}'
-}
-
 blockip(){
   if (( $# == 0 )); then
     echo Please provide IP as command argument.
@@ -109,6 +105,14 @@ locate(){
   else
     echo;
   fi
+}
+
+list_ddos(){
+  for IP in $(somo -s remote_address --no-pager | rg '443.*synrecv' | rg -o --pcre2 '(?:\d+\.){3}(?=\d+)' | uniq)
+  do
+    echo [ ${IP}xxx ]
+    locate ${IP}0
+  done
 }
 
 watch_log(){
