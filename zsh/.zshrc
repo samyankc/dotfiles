@@ -54,6 +54,7 @@ alias bandwhich="sudo $(which bandwhich)"
 alias dft-git-log="git dft-log"
 alias dft-git-show="git dft-show"
 alias dft-git-diff="git dft-diff"
+alias delta="delta --config $HOME/.config/delta/.gitconfig"
 
 if [ -n "$YAZI_LEVEL" ]; then
     PROMPT=" %F{yellow}[ Yazi Sub Shell ] %F{#919191}%B#%b%f "
