@@ -3,5 +3,5 @@
 
 [include]
     path = .gitconfig
-    path = .config/delta/.gitconfig
+    # path = .config/delta/.gitconfig
     path = .config/difftastic/.gitconfig
