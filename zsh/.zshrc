@@ -5,19 +5,18 @@
 PROMPT="%B%F{green} %n  %F{cyan} %M  %F{yellow} %~%f%b
 %F{#919191}󱞪%f "
 
-function include_gitconfig(){
-  if (( $# == 0 )); then
-    echo requires file path as command argument.
-    return 1
-  fi
-  local CONFIG_FILE=$1  
-  [ ! -f "$CONFIG_FILE" ] \
-  || git config get --global --all --fixed-value --value="$CONFIG_FILE" include.path > /dev/null 2>&1 \
-  || git config set --global --append include.path "$CONFIG_FILE"  
-}
-
-include_gitconfig "$HOME/.config/delta/.gitconfig"
-include_gitconfig "$HOME/.config/difftastic/.gitconfig"
+# function include_gitconfig(){
+#   if (( $# == 0 )); then
+#     echo requires file path as command argument.
+#     return 1
+#   fi
+#   local CONFIG_FILE=$1
+#   [ ! -f "$CONFIG_FILE" ] \
+#   || git config get --global --all --fixed-value --value="$CONFIG_FILE" include.path > /dev/null 2>&1 \
+#   || git config set --global --append include.path "$CONFIG_FILE"
+# }
+# include_gitconfig "$HOME/.config/delta/.gitconfig"
+# include_gitconfig "$HOME/.config/difftastic/.gitconfig"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
