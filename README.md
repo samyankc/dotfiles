@@ -6,7 +6,7 @@ curl -L -o $DF.tar.gz https://github.com/samyankc/dotfiles/archive/refs/heads/ma
 tar -xf $DF.tar.gz -C $DF --strip-components=1 && \
 \rm -rf $DF.copy && \
 \cp -rf $DF $DF.copy && \
-\ls -d $DF/*/ | xargs -n 1 basename | xargs stow -t $HOME -d $DF --adopt && \
+\ls -d $DF/*/ | xargs -n 1 basename | xargs stow --no-folding -t $HOME -d $DF --adopt && \
 \rm -rf $DF $DF.tar.gz && \
 \mv -f $DF.copy $DF \
 ;unset DF
