@@ -125,3 +125,7 @@ watch_log(){
   | sed -u 's/^# Time:/\n=====\t/g' \
   | bat -ppl log
 }
+
+for f in ~/.zshrc.d/*.zsh; do
+  [ -f "$f" ] && source "$f"
+done
