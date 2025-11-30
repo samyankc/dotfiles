@@ -1,5 +1,6 @@
 [core]
     editor = hx
+    fileMode = false
 
 [include]
     path = .gitconfig
