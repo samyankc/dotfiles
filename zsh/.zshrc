@@ -126,6 +126,8 @@ watch_log(){
   | bat -ppl log
 }
 
-for f in ~/.zshrc.d/*.zsh; do
-  [ -f "$f" ] && source "$f"
-done
+if [ -f "~/.zshrc.d" ]; then
+  for f in ~/.zshrc.d/*.zsh; do
+    [ -f "$f" ] && source "$f"
+  done
+fi
