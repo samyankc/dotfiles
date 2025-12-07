@@ -37,7 +37,7 @@ function lg() {
 }
 
 function sshz() {
-  ChosenHost=$(rg --pcre2 -o '(?<=^\s{0,10}Host\s)\b[\w.-]+\b' ~/.ssh/config | fzf --layout=reverse --height=~40% --border --preview '')
+  ChosenHost=$(rg --pcre2 -o '(?<=^\s{0,10}Host\s)\b[\w.-]+\b' ~/.ssh/config | FZF_DEFAULT_OPTS='' fzf --query=$1 --layout=reverse --height=~40% --style=full)
   if [[ -n "$ChosenHost" ]]; then
     ssh $ChosenHost
   fi
