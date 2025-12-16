@@ -1,25 +1,25 @@
 [delta]
     navigate = true  # use n and N to move between diff sections
     true-color = always
-    features = chameleon-modify
-    # features = chameleon-modify
+    features = default-theme
     # line-numbers = true
     # line-numbers-minus-style = "#E06C75"
     # line-numbers-plus-style = "#98C379"
 
-[delta "for-lazygit"]
+[delta "default-theme"]
     features = chameleon-modify
+
+[delta "unified-view"]
+    features = default-theme
     side-by-side = false
     line-numbers-left-format = "{nm:>3}"
-    paging = never
 
-[delta "for-lazygit-side-by-side"]
-    features = chameleon-modify
-    paging = never
+[delta "split-view"]
+    features = default-theme
+    side-by-side = true
 
 [delta "chameleon-modify"]
     dark = true
-    side-by-side = true
     commit-style = bold mediumaquamarine reverse
     # commit-decoration-style = box lightblue lightblue 
     line-numbers = true

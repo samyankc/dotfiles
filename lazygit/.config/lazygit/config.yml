@@ -34,8 +34,8 @@ gui:
 
 git:
   pagers:
-    - pager: delta --config $HOME/.config/delta/.gitconfig --features=for-lazygit
-    - pager: delta --config $HOME/.config/delta/.gitconfig --features=for-lazygit-side-by-side
+    - pager: delta --config $HOME/.config/delta/.gitconfig --paging=never --features='unified-view'
+    - pager: delta --config $HOME/.config/delta/.gitconfig --paging=never --features='split-view'
     # - externalDiffCommand: difft
     # - useExternalDiffGitConfig: true
 
