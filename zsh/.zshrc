@@ -96,8 +96,11 @@ locate(){
   fi
 }
 
-list_ddos(){
-  for IP in $(somo -s remote_address --no-pager | rg '443.*synrecv' | rg -o --pcre2 '(?:\d+\.){3}(?=\d+)' | uniq)
+list_ddos(){  
+  for IP in $(somo --no-pager -p 443 -s remote_address --format '{{remote_address}}|{{state}}' \
+              | rg 'synrecv$' \
+              | rg -o --pcre2 '(?:\d+\.){3}(?=\d+)' \
+              | uniq )
   do
     echo [ ${IP}xxx ]
     locate ${IP}0
