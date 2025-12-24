@@ -25,3 +25,4 @@ hidden = false
 mode.normal = "  ---  N O R M A L  ---  "
 mode.insert = "  ---  I N S E R T  ---  "
 mode.select = "  ---  S E L E C T  ---  "
+right = ["diagnostics", "selections", "register", "total-line-numbers", "position", "file-encoding"]
