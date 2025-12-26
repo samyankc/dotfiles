@@ -1,5 +1,6 @@
 [appearance]
 border_style = 'rounded'
+hide_clock = true
 hide_window_buttons = true
 scrollback_lines = 10000
 dockbar_position = 'hidden'
