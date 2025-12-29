@@ -41,4 +41,8 @@ require("full-border"):setup {
 	type = ui.Border.ROUNDED,
 }
 
+-- remove rounded border on selected line
+function Entity:padding() return " " end
+function Linemode:padding() return " " end
+
 require("git"):setup()
