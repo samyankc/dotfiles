@@ -7,8 +7,7 @@ gui:
   theme:
     selectedLineBgColor:
       - bold
-      - reverse
-      # - '#404040'
+      - '#404040'
   commitHashLength: 5
 
   spinner:
@@ -45,6 +44,7 @@ git:
 
 notARepository: skip
 promptToReturnFromSubprocess: false
+
 
 
 
