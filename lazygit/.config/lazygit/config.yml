@@ -1,10 +1,14 @@
 gui:
-  sidePanelWidth: 0.34
+  expandFocusedSidePanel: true
+  expandedSidePanelWeight: 2
+  sidePanelWidth: 0.32
   nerdFontsVersion: 3
+  filterMode: fuzzy
   theme:
     selectedLineBgColor:
       - bold
-      - '#404040'
+      - reverse
+      # - '#404040'
   commitHashLength: 5
 
   spinner:
@@ -41,6 +45,7 @@ git:
 
 notARepository: skip
 promptToReturnFromSubprocess: false
+
 
 
 
