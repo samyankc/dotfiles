@@ -1,5 +1,10 @@
-## Apply config without clone
+## Install frequently used application from hombrew
+``` sh
+brew install btop bat fzf fd ripgrep yazi helix lazygit git-delta difftastic
 ```
+
+## Apply config without clone
+``` sh
 DF=$HOME/dotfiles; \
 curl -L -o $DF.tar.gz https://github.com/samyankc/dotfiles/archive/refs/heads/main.tar.gz && \
 \mkdir -p $DF && \
