@@ -7,9 +7,29 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-    "ui_font_size": 18,
-    "buffer_font_size": 18,
-    "buffer_font_family": "Inconsolata Nerd Font",
+    "tabs": {
+        "file_icons": true
+    },
+    "scrollbar": {
+        "axes": {
+            "horizontal": false
+        }
+    },
+    "scroll_beyond_last_line": "vertical_scroll_margin",
+    "title_bar": {
+        "show_sign_in": false
+    },
+    "project_panel": {
+        "indent_size": 14.0
+    },
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false
+    },
+    "disable_ai": true,
+    "ui_font_size": 20,
+    "buffer_font_size": 16,
+    "buffer_font_family": "Maple Mono NF",
     "buffer_line_height": "standard",
     "format_on_save": "off",
 
@@ -28,7 +48,6 @@
     "lsp": {
         "clangd": {
             "binary": {
-                "path_lookup": true,
                 "path": "clangd",
                 "arguments": [
                     "--all-scopes-completion",
