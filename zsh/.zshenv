@@ -15,6 +15,9 @@ if which g++-15 > /dev/null 2>&1; then
 else
 	export CXX="$(which g++)"
 fi
+if which podman > /dev/null 2>&1; then
+	export DOCKER_HOST="unix:///run/user/$UID/podman/podman.sock"
+fi
 export SHELL="$(which zsh)"
 export EDITOR="$(which hx)"
 export VISUAL=$EDITOR
