@@ -24,10 +24,20 @@ function lg() {
 }
 
 function sshz() {
-  ChosenHost=$(rg --pcre2 -o '(?<=^\s{0,10}Host\s)\b[\w.-]+\b' ~/.ssh/config | FZF_DEFAULT_OPTS='' fzf --query=$1 --layout=reverse --height=~40% --style=full)
-  if [[ -n "$ChosenHost" ]]; then
-    ssh $ChosenHost
-  fi
+  local FZF_Header=$(echo "[Enter]:Connect\n[Ctrl+P]:Print" | column -t -s ':')  
+  local LF_T=$(echo "\n    ")
+  local FZF_DEFAULT_OPTS=''
+    rg --pcre2 -o '(?<=^\s{0,10}Host\s)\b[\w.-]+\b' ~/.ssh/config \
+  | rg -v '^\s*github\s*$' \
+  | fzf --layout=reverse --height=~40% --style=full --query "$1" \
+        --header "$FZF_Header" \
+        --preview-window '68%' \
+        --preview " \ssh -q -G {} \
+                  | \rg --color=always --colors='match:fg:120,120,120' \
+                        '^(host|user|hostname|identityfile|proxycommand|remotecommand) ' \
+                        -r '\$1${LF_T}' " \
+        --bind 'enter:become:ssh {1}' \
+        --bind 'ctrl-p:accept'
 }
 
 alias su="su --shell=$(which zsh)"
@@ -38,6 +48,7 @@ alias lsr="lsr -lA --group-directories-first --hyperlinks=never"
 alias cls="clear && tput cup 1024 0"
 alias somo="sudo $(which somo) -c"
 alias bandwhich="sudo $(which bandwhich)"
+alias pickz="FZF_DEFAULT_OPTS='' fzf --layout=reverse --height=~40% --style=full --query"
 alias dft-git-log="git dft-log"
 alias dft-git-show="git dft-show"
 alias dft-git-diff="git dft-diff"
@@ -102,7 +113,7 @@ list_ddos(){
               | rg -o --pcre2 '(?:\d+\.){3}(?=\d+)' \
               | uniq )
   do
-    echo [ ${IP}xxx ]
+    echo \[ ${IP}xxx \]
     locate ${IP}0
   done
 }
@@ -123,3 +134,4 @@ if [ -d "$HOME/.zshrc.d" ]; then
     [ -f "$f" ] && source "$f"
   done
 fi
+
