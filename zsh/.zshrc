@@ -28,7 +28,7 @@ sshz() {
   local LF_T=$(echo "\n    ")
   local FZF_DEFAULT_OPTS=''
     rg --pcre2 -o '(?<=^\s{0,10}Host\s)\b[\w.-]+\b' ~/.ssh/config \
-  | rg -v '^\s*github\s*$' \
+  | rg -v '^\s*github(\.com)?\s*$' \
   | fzf --layout=reverse --height=~40% --style=full --query "$1" \
         --footer "$FZF_Footer" \
         --preview-window '68%' \
