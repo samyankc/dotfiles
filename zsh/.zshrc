@@ -5,7 +5,7 @@
 PROMPT="%B%F{green} %n  %F{cyan} %M  %F{yellow} %~%f%b
 %F{#919191}󱞪%f "
 
-function y() {
+y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
@@ -14,7 +14,7 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-function lg() {
+lg() {
 	export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir
 	lazygit "$@"
 	if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
@@ -23,14 +23,14 @@ function lg() {
 	fi
 }
 
-function sshz() {
-  local FZF_Header=$(echo "[Enter]:Connect\n[Ctrl+P]:Print" | column -t -s ':')  
+sshz() {
+  local FZF_Footer=$(echo "[Enter]:Connect\n[Ctrl+P]:Print" | column -t -s ':')  
   local LF_T=$(echo "\n    ")
   local FZF_DEFAULT_OPTS=''
     rg --pcre2 -o '(?<=^\s{0,10}Host\s)\b[\w.-]+\b' ~/.ssh/config \
   | rg -v '^\s*github\s*$' \
   | fzf --layout=reverse --height=~40% --style=full --query "$1" \
-        --header "$FZF_Header" \
+        --footer "$FZF_Footer" \
         --preview-window '68%' \
         --preview " \ssh -q -G {} \
                   | \rg --color=always --colors='match:fg:120,120,120' \
@@ -48,7 +48,7 @@ alias lsr="lsr -lA --group-directories-first --hyperlinks=never"
 alias cls="clear && tput cup 1024 0"
 alias somo="sudo $(which somo) -c"
 alias bandwhich="sudo $(which bandwhich)"
-alias pickz="FZF_DEFAULT_OPTS='' fzf --layout=reverse --height=~40% --style=full --query="
+alias pickz="FZF_DEFAULT_OPTS='' fzf --layout=reverse --height=~40% --style=full -m"
 alias dft-git-log="git dft-log"
 alias dft-git-show="git dft-show"
 alias dft-git-diff="git dft-diff"

@@ -23,4 +23,8 @@ export FZF_DEFAULT_OPTS="-m --style=full --preview='\bat --line-range :200 --squ
 export FZF_DEFAULT_COMMAND='fd -HILtf'
 export DFT_PARSE_ERROR_LIMIT=20
 export GIT_CONFIG_GLOBAL="$HOME/.gitconfig.zsh"
+
+# podman related
 export PODMAN_COMPOSE_WARNING_LOGS=false
+export CONMON="$(which conmon)"
+export CONTAINER_RUNTIME="$(which crun)"
