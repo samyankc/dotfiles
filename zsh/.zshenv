@@ -28,3 +28,4 @@ export GIT_CONFIG_GLOBAL="$HOME/.gitconfig.zsh"
 export PODMAN_COMPOSE_WARNING_LOGS=false
 export CONMON="$(which conmon)"
 export CONTAINER_RUNTIME="$(which crun)"
+export REGISTRY_AUTH_FILE="$HOME/.config/containers/auth.json"
