@@ -8,3 +8,6 @@ settings:
   onlyStream: false
 
   disableFastMode: false
+
+interface:
+  containerLogList: podman
