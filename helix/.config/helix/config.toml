@@ -4,6 +4,7 @@ theme = "dark_plus_nobg"
 line-number = "relative"
 color-modes = true
 end-of-line-diagnostics = "hint"
+insert-final-newline = false
 
 [editor.inline-diagnostics]
 cursor-line = "hint"
