@@ -45,4 +45,7 @@ require("full-border"):setup {
 function Entity:padding() return " " end
 function Linemode:padding() return " " end
 
-require("git"):setup()
+require("git"):setup {
+	-- Order of status signs showing in the linemode
+	order = 1500,
+}
