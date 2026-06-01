@@ -7,6 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "mouse_wheel_zoom": true,
+    "collaboration_panel": {
+        "button": false
+    },
     "tabs": {
         "file_icons": true
     },
@@ -20,6 +24,7 @@
         "show_sign_in": false
     },
     "project_panel": {
+        "dock": "left",
         "indent_size": 14.0
     },
     "telemetry": {
@@ -27,7 +32,14 @@
         "metrics": false
     },
     "disable_ai": true,
-    "ui_font_size": 20,
+
+    "unstable.ui_density":"compact",
+    "ui_font_size": 18,
+    "toolbar":{
+      "breadcrumbs": false,
+      "quick_actions": false
+    },
+
     "buffer_font_size": 16,
     "buffer_font_family": "Maple Mono NF",
     "buffer_line_height": "standard",
@@ -42,23 +54,13 @@
     "theme": {
         "mode": "system",
         "light": "One Light",
-        "dark": "VSCode Dark Modern"
-    },
-
-    "lsp": {
-        "clangd": {
-            "binary": {
-                "path": "clangd",
-                "arguments": [
-                    "--all-scopes-completion",
-                    "--header-insertion=never",
-                    "--malloc-trim"
-                ]
-            }
-        }
+        "dark": "One Dark"
     },
 
     "languages": {
+      "PHP": {
+         "enable_language_server": false
+      },
       "HTML": {
         "language_servers": ["biome"]
       },
@@ -77,4 +79,3 @@
         }
     }
 }
-
