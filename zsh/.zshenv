@@ -10,11 +10,7 @@ export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PR
 # export CPPFLAGS="-std=c++26"
 export C_INCLUDE_PATH="$HOMEBREW_PREFIX/include:$C_INCLUDE_PATH"
 export CPLUS_INCLUDE_PATH="$HOMEBREW_PREFIX/include:$CPLUS_INCLUDE_PATH"
-if which g++-15 > /dev/null 2>&1; then
-	export CXX="$(which g++-15)"
-else
-	export CXX="$(which g++)"
-fi
+export CXX="$(which g++)"
 export SHELL="$(which zsh)"
 export EDITOR="$(which hx)"
 export VISUAL=$EDITOR
