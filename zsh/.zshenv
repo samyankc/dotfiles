@@ -1,4 +1,5 @@
 export COLORTERM=truecolor
+export WORDCHARS=""
 if [[ $(uname) == "Darwin" ]]; then
 	export HOMEBREW_PREFIX="/opt/homebrew"
 else
