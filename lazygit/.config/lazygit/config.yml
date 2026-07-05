@@ -1,4 +1,5 @@
 gui:
+  shrinkSidePanelsToContent: true
   expandFocusedSidePanel: true
   expandedSidePanelWeight: 2
   sidePanelWidth: 0.32
@@ -9,6 +10,12 @@ gui:
       - bold
       - '#404040'
   commitHashLength: 5
+
+  sidePanels:
+    - [status]
+    - [files, worktrees, submodules]
+    - [branches, remotes, tags]
+    - [commits, reflog]
 
   spinner:
     frames:
