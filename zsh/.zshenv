@@ -22,9 +22,11 @@ export DFT_PARSE_ERROR_LIMIT=20
 export GIT_CONFIG_GLOBAL="$HOME/.gitconfig.zsh"
 
 # podman related
-export PODMAN_COMPOSE_WARNING_LOGS=false
-export CONMON="$(which conmon)"
-export CONTAINER_RUNTIME="$(which crun)"
-export REGISTRY_AUTH_FILE="$HOME/.config/containers/auth.json"
-export XDG_RUNTIME_DIR=/run/user/$(id -u)
-export DBUS_SESSION_BUS_ADDRESS=unix:path=$XDG_RUNTIME_DIR/bus
+if [[ $(uname) != "Darwin" ]]; then
+	export PODMAN_COMPOSE_WARNING_LOGS=false
+	export CONMON="$(which conmon)"
+	export CONTAINER_RUNTIME="$(which crun)"
+	export REGISTRY_AUTH_FILE="$HOME/.config/containers/auth.json"
+	export XDG_RUNTIME_DIR=/run/user/$(id -u)
+	export DBUS_SESSION_BUS_ADDRESS=unix:path=$XDG_RUNTIME_DIR/bus
+fi
