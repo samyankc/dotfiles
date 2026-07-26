@@ -5,6 +5,7 @@ if [[ $(uname) == "Darwin" ]]; then
 else
 	export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
 fi
+export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_CELLAR="$HOMEBREW_PREFIX/Cellar"
 export HOMEBREW_REPOSITORY="$HOMEBREW_PREFIX/Homebrew"
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH:$HOMEBREW_PREFIX/opt/binutils/bin"
