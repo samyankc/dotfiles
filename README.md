@@ -1,5 +1,6 @@
 ## Install frequently used application from hombrew
 ``` sh
+brew analytics off
 brew install btop bat fzf fd ripgrep yazi helix lazygit git-delta difftastic
 ```
 
