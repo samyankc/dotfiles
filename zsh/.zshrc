@@ -23,6 +23,14 @@ lg() {
 	fi
 }
 
+suz() {
+    grep -E 'zsh|bash' /etc/passwd \
+  | cut -d':' -f1 \
+  | fzf --no-preview --layout=reverse --height=~40% --style=full \
+        --query "$1" \
+        # --bind 'enter:become:su - {1}'
+}
+
 sshz() {
   local FZF_Footer=$(echo "[Enter]:Connect\n[Ctrl+P]:Print" | column -t -s ':')  
   local LF_T=$(echo "\n    ")
