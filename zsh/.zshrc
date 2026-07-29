@@ -24,11 +24,14 @@ lg() {
 }
 
 suz() {
+  local FZF_DEFAULT_OPTS=''
     grep -E 'zsh|bash' /etc/passwd \
   | cut -d':' -f1 \
-  | fzf --no-preview --layout=reverse --height=~40% --style=full \
-        --query "$1" \
-        # --bind 'enter:become:su - {1}'
+  | fzf --layout=reverse --height=~40% --style=full --query "$1" \
+        --preview-window '68%' \
+        --bind 'enter:become:su - {}' \
+        --preview "id {}  | tr ') ' '\n' | column -t -s ',=('"
+      # --preview "id {} | tr ' ' '\n' | sed 's/=\|,/\n   /g' | column -t -s '()'"
 }
 
 sshz() {
@@ -48,15 +51,13 @@ sshz() {
         --bind 'ctrl-p:accept'
 }
 
-alias su="su --shell=$(which zsh)"
 alias myip="curl -Ls ifconfig.me && echo"
 alias lj="lazyjournal"
 alias ls="ls --color=auto -lhA"
 alias lsr="lsr -lA --group-directories-first --hyperlinks=never"
 alias cls="clear && tput cup 1024 0"
 alias somo="sudo $(which somo) -c"
-alias bandwhich="sudo $(which bandwhich)"
-alias pickz="FZF_DEFAULT_OPTS='' fzf --layout=reverse --height=~40% --style=full -m"
+alias btop="btop --no-tty"
 alias dft-git-log="git dft-log"
 alias dft-git-show="git dft-show"
 alias dft-git-diff="git dft-diff"

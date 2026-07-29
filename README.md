@@ -1,3 +1,8 @@
+## Install homebrew
+``` sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
 ## Install frequently used application from hombrew
 ``` sh
 brew analytics off

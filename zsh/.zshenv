@@ -6,13 +6,14 @@ else
 	export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
 fi
 export HOMEBREW_NO_ANALYTICS=1
-export HOMEBREW_CELLAR="$HOMEBREW_PREFIX/Cellar"
-export HOMEBREW_REPOSITORY="$HOMEBREW_PREFIX/Homebrew"
-export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH:$HOMEBREW_PREFIX/opt/binutils/bin"
+# export HOMEBREW_CELLAR="$HOMEBREW_PREFIX/Cellar"
+# export HOMEBREW_REPOSITORY="$HOMEBREW_PREFIX/Homebrew"
+export PATH="$HOME/.local/bin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH"
+# export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH:$HOMEBREW_PREFIX/opt/binutils/bin"
 # export CPPFLAGS="-std=c++26"
-export C_INCLUDE_PATH="$HOMEBREW_PREFIX/include:$C_INCLUDE_PATH"
-export CPLUS_INCLUDE_PATH="$HOMEBREW_PREFIX/include:$CPLUS_INCLUDE_PATH"
-export CXX="$(which g++)"
+# export C_INCLUDE_PATH="$HOMEBREW_PREFIX/include:$C_INCLUDE_PATH"
+# export CPLUS_INCLUDE_PATH="$HOMEBREW_PREFIX/include:$CPLUS_INCLUDE_PATH"
+# export CXX="$(which g++)"
 export SHELL="$(which zsh)"
 export EDITOR="$(which hx)"
 export VISUAL=$EDITOR
@@ -23,11 +24,13 @@ export DFT_PARSE_ERROR_LIMIT=20
 export GIT_CONFIG_GLOBAL="$HOME/.gitconfig.zsh"
 
 # podman related
+export PODMAN_COMPOSE_WARNING_LOGS=false
 if [[ $(uname) != "Darwin" ]]; then
-	export PODMAN_COMPOSE_WARNING_LOGS=false
 	export CONMON="$(which conmon)"
 	export CONTAINER_RUNTIME="$(which crun)"
 	export REGISTRY_AUTH_FILE="$HOME/.config/containers/auth.json"
 	export XDG_RUNTIME_DIR=/run/user/$(id -u)
 	export DBUS_SESSION_BUS_ADDRESS=unix:path=$XDG_RUNTIME_DIR/bus
 fi
+
+typeset -U path
