@@ -24,10 +24,9 @@ lg() {
 }
 
 suz() {
-  local FZF_DEFAULT_OPTS=''
-    grep -E 'zsh|bash' /etc/passwd \
+    grep -E '/sh|/zsh|/bash' /etc/passwd \
   | cut -d':' -f1 \
-  | fzf --layout=reverse --height=~40% --style=full --query "$1" \
+  | sudo `which fzf` --layout=reverse --height=~40% --style=full --query "$1" \
         --preview-window '68%' \
         --bind 'enter:become:su - {}' \
         --preview "id {}  | tr ') ' '\n' | column -t -s ',=('"
