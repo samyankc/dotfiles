@@ -50,13 +50,12 @@ sshz() {
         --bind 'ctrl-p:accept'
 }
 
-alias myip="curl -Ls ifconfig.me && echo"
+alias myip="dig +short -4 myip.opendns.com @resolver1.opendns.com"
 alias lj="lazyjournal"
 alias ls="ls --color=auto -lhA"
 alias lsr="lsr -lA --group-directories-first --hyperlinks=never"
 alias cls="clear && tput cup 1024 0"
 alias somo="sudo $(which somo) -c"
-alias btop="btop --no-tty"
 alias dft-git-log="git dft-log"
 alias dft-git-show="git dft-show"
 alias dft-git-diff="git dft-diff"
