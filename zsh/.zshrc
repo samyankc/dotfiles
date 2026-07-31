@@ -28,7 +28,7 @@ suz() {
   | cut -d':' -f1 \
   | sudo `which fzf` --layout=reverse --height=~40% --style=full --query "$1" \
         --preview-window '68%' \
-        --bind 'enter:become:su - {}' \
+        --bind 'enter:become(su -l --pty {})' \
         --preview "id {}  | tr ') ' '\n' | column -t -s ',=('"
       # --preview "id {} | tr ' ' '\n' | sed 's/=\|,/\n   /g' | column -t -s '()'"
 }
@@ -46,7 +46,7 @@ sshz() {
                   | \rg --color=always --colors='match:fg:120,120,120' \
                         '^(host|user|hostname|identityfile|proxycommand|remotecommand) ' \
                         -r '\$1${LF_T}' " \
-        --bind 'enter:become:ssh {1}' \
+        --bind 'enter:become(ssh {})' \
         --bind 'ctrl-p:accept'
 }
 
