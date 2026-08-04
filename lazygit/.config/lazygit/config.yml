@@ -20,15 +20,6 @@ gui:
   spinner:
     frames:
       # https://andreichiril.neocities.org/braille
-      # - '⢿'
-      # - '⣻'
-      # - '⣽'
-      # - '⣾'
-      # - '⣷'
-      # - '⣯'
-      # - '⣟'
-      # - '⡿'
-      #
       - '⣏⣀ '
       - '⣏⡁ '
       - '⣏⠉ '
@@ -43,9 +34,9 @@ gui:
       - '⣇⣠ '
 
 git:
-  pagers:
-    - pager: delta --config $HOME/.config/delta/.gitconfig --paging=never --features='unified-view'
-    - pager: delta --config $HOME/.config/delta/.gitconfig --paging=never --features='split-view'
+  diffRenderers:
+    - command: delta --config $HOME/.config/delta/.gitconfig --paging=never --features='unified-view'
+    - command: delta --config $HOME/.config/delta/.gitconfig --paging=never --features='split-view'
     # - externalDiffCommand: difft
     # - useExternalDiffGitConfig: true
 
