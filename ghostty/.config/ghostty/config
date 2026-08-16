@@ -2,7 +2,7 @@ term = xterm-256color
 
 # theme = One Double Dark
 # theme = Snazzy
-theme = One Half Dark
+theme = dark:One Half Dark, light:One Half Light
 
 freetype-load-flags = no-hinting, no-autohint
 font-synthetic-style = false
