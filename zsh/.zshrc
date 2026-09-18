@@ -50,6 +50,10 @@ sshz() {
         --bind 'ctrl-p:accept'
 }
 
+if [ "$(whoami)" != "$HOMEBREW_OWNER" ]; then
+  alias brew="sudo -i -u $HOMEBREW_OWNER brew"
+fi
+
 alias myip="dig +short -4 myip.opendns.com @resolver1.opendns.com"
 alias lj="lazyjournal"
 alias ls="ls --color=auto -lhA"
