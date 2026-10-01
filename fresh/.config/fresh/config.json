@@ -1,0 +1,111 @@
+{
+  "self_update": false,
+  "orchestrator_mode": false,
+  "check_for_updates": false,
+  "theme": "builtin://terminal",
+  "file_explorer": {
+    "auto_open_on_last_buffer_close": false,
+    "show_hidden": true,
+    "show_gitignored": true
+  },
+  "editor": {
+    "page_width": 0,
+    "smooth_scroll": false,
+    "line_wrap": false,
+    "hot_exit": false,
+    "auto_create_empty_buffer_on_last_buffer_close": false,
+    "nerd_font_icons": true,
+    "cursor_jump_animation": false,
+    "restore_previous_session": false,
+    "recovery_enabled": false,
+    "animations": false,
+    "mouse_hover_enabled": false
+  },
+  "file_browser": {
+    "show_hidden": true
+  },
+  "lsp_enabled": false,
+  "plugins": {
+    "agent_discovery": {
+      "enabled": false
+    },
+    "lsp_help": {
+      "enabled": false
+    },
+    "asm-lsp": {
+      "enabled": false
+    },
+    "csharp_support": {
+      "enabled": false
+    },
+    "deno_lsp": {
+      "enabled": false
+    },
+    "agent_sessions": {
+      "enabled": false
+    },
+    "devcontainer": {
+      "enabled": false
+    },
+    "markdown_toc": {
+      "enabled": false
+    },
+    "agent_sessions_codex": {
+      "enabled": false
+    },
+    "dashboard": {
+      "enabled": false
+    },
+    "flash": {
+      "enabled": false
+    },
+    "audit_mode": {
+      "enabled": false
+    },
+    "agent_sessions_claude_code": {
+      "enabled": false
+    },
+    "agent_sessions_tmux": {
+      "enabled": false
+    },
+    "agent_sessions_orchestrators": {
+      "enabled": false
+    },
+    "agent_sessions_multiplexers": {
+      "enabled": false
+    },
+    "lsp_navigation": {
+      "enabled": false
+    },
+    "markdown_source": {
+      "enabled": false
+    },
+    "orchestrator": {
+      "enabled": false
+    },
+    "rust-lsp": {
+      "enabled": false
+    },
+    "k8s-workspace": {
+      "enabled": false
+    },
+    "slang-lsp": {
+      "enabled": false
+    },
+    "markdown_compose": {
+      "enabled": false
+    },
+    "welcome": {
+      "enabled": false
+    },
+    "welcome_screen": {
+      "enabled": false
+    },
+    "clangd_support": {
+      "enabled": false
+    },
+    "vi_mode": {
+      "enabled": false
+    }
+  }
+}
