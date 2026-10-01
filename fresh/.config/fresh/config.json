@@ -9,7 +9,6 @@
     "show_gitignored": true
   },
   "editor": {
-    "page_width": 0,
     "smooth_scroll": false,
     "line_wrap": false,
     "hot_exit": false,
@@ -19,7 +18,9 @@
     "restore_previous_session": false,
     "recovery_enabled": false,
     "animations": false,
-    "mouse_hover_enabled": false
+    "mouse_hover_enabled": false,
+    "show_menu_bar": false,
+    "set_window_title": false
   },
   "file_browser": {
     "show_hidden": true
