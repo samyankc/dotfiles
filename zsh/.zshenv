@@ -16,7 +16,7 @@ export PATH="$HOME/.local/bin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH"
 # export CPLUS_INCLUDE_PATH="$HOMEBREW_PREFIX/include:$CPLUS_INCLUDE_PATH"
 # export CXX="$(which g++)"
 export SHELL="$(which zsh)"
-export EDITOR="$(which hx)"
+export EDITOR="$(command -v fresh || command -v hx)"
 export VISUAL=$EDITOR
 export SUDO_EDITOR=$EDITOR
 export FZF_DEFAULT_OPTS="-m --style=full --preview='\bat --line-range :200 --squeeze-blank -f {}' --preview-window=~3"
