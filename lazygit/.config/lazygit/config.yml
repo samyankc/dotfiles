@@ -19,7 +19,7 @@ gui:
     - [commits, reflog]
 
   spinner:
-    rate: 40
+    rate: 100
     frames:
       # https://andreichiril.neocities.org/braille
       - '⣏⣀ '
