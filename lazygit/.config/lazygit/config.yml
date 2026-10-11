@@ -1,4 +1,5 @@
 gui:
+  wrapLinesInDiffView: false
   shrinkSidePanelsToContent: true
   expandFocusedSidePanel: true
   expandedSidePanelWeight: 2
@@ -18,6 +19,7 @@ gui:
     - [commits, reflog]
 
   spinner:
+    rate: 40
     frames:
       # https://andreichiril.neocities.org/braille
       - '⣏⣀ '
