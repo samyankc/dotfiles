@@ -1,6 +1,5 @@
 {
   "self_update": false,
-  "orchestrator_mode": false,
   "check_for_updates": false,
   "theme": "builtin://terminal",
   "file_explorer": {
@@ -107,6 +106,19 @@
     },
     "vi_mode": {
       "enabled": false
+    },
+    "live_sessions": {
+      "settings": {
+        "claudeLocal": false,
+        "claudeCloud": false,
+        "enabled": false,
+        "codexCloud": false,
+        "codexLocal": false
+      }
     }
+  },
+  "auto_attach": false,
+  "terminal": {
+    "close_on_exit": true
   }
 }
